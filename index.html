@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 2</title>
+  <style>
+    details {
+      margin-left: 10px;
+    }
+
+    summary > span {
+      font-size: smaller;
+      color: darkslategray;
+    }
+  </style>
+</head>
+<body>
+  <div id="output"></div>
+  <script>
+    fetch('query.php')
+    .then( (response) => {
+      return response.text()
+    })
+    .then( (data) => {
+      const output = document.getElementById('output')
+      output.innerHTML = data
+    })
+  </script>
+</body>
+</html>
